@@ -1,0 +1,138 @@
+/*
+
+  light // dark class for each respective element
+  
+  classes { 
+    ELEMENT TYPES
+    button, link, card, header
+    
+    MISC
+    flex-down, flex-side, align-center
+
+*/
+
+/* ===================== UTILITY ===================== */ 
+
+.align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-screen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.horizontal-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+
+/* =====================  INTRO  ===================== */ 
+
+/* =====================  ABOUT  ===================== */ 
+.about-container {
+  max-width: 1100px;
+  width: 80vw;
+  max-height: 400px;
+  transition: background-color .5s, height .5s;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+/* =====================  HEADER  ===================== */ 
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.Header>h1 {
+  background-color: grey;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0.67em;
+  margin-block-start: 0;
+  font-size: 1.5em;
+}
+
+/* ===================  ICONINFOBAR  =================== */ 
+.IconInfoBar {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user {
+  background-color: blue;
+}
+
+.computer {
+  background-color: red;
+}
+
+.database {
+  background-color: green;
+}
+
+.lock {
+  background-color: yellow;
+}
+
+.smartphone {
+  background-color: purple;
+}
+
+.upload {
+  background-color: brown;
+}
+
+.icon-container {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+
+  transition: height .5s, background-color .5s, margin-bottom .5s;
+}
+
+.icon-container.active {
+  position: relative;
+  height: 40px;
+  margin-bottom: 0px;
+  
+}
+
+.icon-container.not-active {
+  height: 0px;
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+
+.icon {
+  font-size: 32px;
+  height: 32px;
+  padding: 5px;
+  border-radius: 12px;
+  transition: background-color .2s;
+}
+
+.icon.not-active:hover {
+  background-color: grey;
+  
+}

@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.alt-font {
+  font-family: 'Open Sans', sans-serif;
+
+}
