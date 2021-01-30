@@ -14,10 +14,6 @@ const SmallProject = (props) => {
 
     const [isHovering, setIsHovering] = useState(false)
 
-    useEffect(() => {
-        console.log(`last ? ${props.last}`)
-    }, [])
-
     return (
         <div tabIndex="0" className={`SmallProject align-center ${(props.last)?`last-small-project`:null}`} onMouseOver={() => {setIsHovering(true)}} onMouseLeave={() => {setIsHovering(false)}} onFocus={() => {setIsHovering(true)}} onBlur={() => {setIsHovering(false)}} >
             

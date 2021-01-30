@@ -28,7 +28,7 @@ const Project = (props) => {
     }, [isHovering])
 
     return (
-        <div tabIndex="0" className='Project align-center' style={(showDescr === true)? {height:'calc(var(--project-height) * 1.5)'}:null} onMouseOver={() => {setIsHovering(true)}} onMouseLeave={() => {setIsHovering(false)}} onFocus={() => {setIsHovering(true)}} onBlur={() => {setIsHovering(false)}} >
+        <div tabIndex="0" className={`Project ${(showDescr === true)?'expand':null} align-center`} onMouseOver={() => {setIsHovering(true)}} onMouseLeave={() => {setIsHovering(false)}} onFocus={() => {setIsHovering(true)}} onBlur={() => {setIsHovering(false)}} >
             
 
             <AnimatePresence>
