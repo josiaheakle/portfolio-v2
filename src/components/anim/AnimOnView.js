@@ -14,7 +14,7 @@ const AnimOnView = ({ children }) => {
     }, [controls, inView]);
 
     return (
-        <motion.div ref={ref} animate={controls} initial="hidden" transition={{ duration: 0.5 }} variants={{ visible: { opacity: 1}, hidden: { opacity: 0} }}>
+        <motion.div ref={ref} animate={controls} initial="hidden" transition={{ duration: 1 }} variants={{ visible: { opacity: 1}, hidden: { opacity: 0} }}>
             {children}
         </motion.div>
     );

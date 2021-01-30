@@ -41,12 +41,12 @@ const IconInfoBar = ( props ) => {
 
     return(
         <div className={`IconInfoBar`}>
-            <BarIcon click={handleClick} iconName='user' iconActive={(activeIcon === 'user')?true:false} />
-            <BarIcon click={handleClick} iconName='computer' iconActive={(activeIcon === 'computer')?true:false} />
-            <BarIcon click={handleClick} iconName='database' iconActive={(activeIcon === 'database')?true:false} />
-            <BarIcon click={handleClick} iconName='smartphone' iconActive={(activeIcon === 'smartphone')?true:false} />
-            <BarIcon click={handleClick} iconName='lock' iconActive={(activeIcon === 'lock')?true:false} />
-            <BarIcon click={handleClick} iconName='upload' iconActive={(activeIcon === 'upload')?true:false} />
+            <BarIcon title='About Me' click={handleClick} iconName='user' iconActive={(activeIcon === 'user')?true:false} />
+            <BarIcon title='Front-End' click={handleClick} iconName='computer' iconActive={(activeIcon === 'computer')?true:false} />
+            <BarIcon title='Back-End' click={handleClick} iconName='database' iconActive={(activeIcon === 'database')?true:false} />
+            <BarIcon title='Mobile Friendly' click={handleClick} iconName='smartphone' iconActive={(activeIcon === 'smartphone')?true:false} />
+            <BarIcon title='Security' click={handleClick} iconName='lock' iconActive={(activeIcon === 'lock')?true:false} />
+            <BarIcon title='Hosting and Management' click={handleClick} iconName='upload' iconActive={(activeIcon === 'upload')?true:false} />
         </div>
     );
 }

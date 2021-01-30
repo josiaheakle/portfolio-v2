@@ -9,11 +9,14 @@ import '../media/icons/css/uicons-regular-rounded.css';
 // components
 import Header from "./Header.js"
 import Intro from "./Intro.js"
-import About from "./about/About.js"
+import About from "./About.js"
+import Projects from "./projects/Projects.js"
+import Footer from "./Footer.js"
 
 // animation
-import AnimOnView from "./anim/AnimOnView.js"
 import { AnimatePresence } from 'framer-motion';
+import Background from './Background';
+import Contact from './Contact';
 
 const App = () => {
 
@@ -25,13 +28,18 @@ const App = () => {
 
   return (
     <div className="App">
+      {/* <CanvasBackground /> */}
+
+      <Background />
+
       <AnimatePresence>
         {(!!renderHeader)? <Header key='header' />:null}
       </AnimatePresence>
       <Intro renderHeader={showHeader} />
-      <AnimOnView >
-        <About />
-      </AnimOnView>
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }
