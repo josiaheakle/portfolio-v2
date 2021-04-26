@@ -33,7 +33,7 @@ const Background = () => {
             squareRef_3.current.style.position = 'relative';
             squareRef_3.current.style.bottom = scroll + 'px';
 
-            underlineRef.current.style.left =  (scroll - (16 * 12)) + 'px';
+            underlineRef.current.style.left =  (scroll - (16 * 16)) + 'px';
 
 
             // underlineRef.current.style.opacity = 1 - (scroll / window.innerHeight);
@@ -69,7 +69,7 @@ const Background = () => {
         <div className='Background full-screen'> 
             <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.5}} ref={squareRef_1} className="background-square" />
             <motion.div initial={{opacity: 0}} animate={square2Controls} ref={squareRef_2} id='square2' className="background-square" />
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 2.5}} ref={squareRef_3} className="background-square" />
+            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 2.5}} ref={squareRef_3} className="middle background-square" />
             <div className='underline-square-container'>
                 <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 3.5}} ref={underlineRef} className="underline-square" />
             </div>

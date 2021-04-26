@@ -36,6 +36,7 @@ const About = ( props ) => {
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
+                            <li>TypeScript</li>
                             <li>React.js</li>
                         </ul>
                         I push to create beautiful and functional websites, designed to be sharp and streamlined for all.
@@ -47,8 +48,9 @@ const About = ( props ) => {
                 setAboutBody(
                     <span className='about-body'>Any user authenticaion or data managment will inevitably require a back-end. Experienced in 
                         <ul className='horizontal-list bold'>
-                            <li>Node.js</li>
-                            <li>Express.js</li>
+                            <li>Node</li>
+                            <li>Express</li>
+                            <li>Deno</li>
                             <li>PHP</li>
                         </ul>
                         I will deliver a secure back-end or REST API perfect for any use case.

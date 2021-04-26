@@ -23,8 +23,8 @@ const SmallProject = (props) => {
                     <h3 className='project-title'>{props.title}</h3>
                     <p className='project-description' >{props.descr}</p>
                     <motion.span className='project-link-container' initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
-                        <a href={props.ghLink} className='github-link'> <img className='github-icon' src={ghIcon}/> </a>
-                        <a href={props.link} className='project-link'>Visit Website <i className='fi-rr-angle-small-right'/></a>
+                        <a href={props.ghLink} className='github-link p-link'> <img className='github-icon' src={ghIcon}/> </a>
+                        <a href={props.link} className='project-link p-link'>Visit Website <i className='fi-rr-angle-small-right'/></a>
                     </motion.span>
                 </motion.div>
                 :

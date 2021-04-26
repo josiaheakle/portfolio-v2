@@ -42,10 +42,10 @@ const Project = (props) => {
                         </ul>
                     : null }
                     <motion.span className='project-link-container' initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
-                    {(showDescr) ? 
-                        <a href={props.ghLink} className='github-link'> <img className='github-icon' src={ghIcon}/> </a>
+                    {(showDescr && props.ghLink) ? 
+                        <a href={props.ghLink} className='github-link p-link'> <img className='github-icon' src={ghIcon}/> </a>
                     : null}
-                        <a href={props.link} className='project-link'>Visit Website <i className='fi-rr-angle-small-right'/></a>
+                        <a href={props.link} className='project-link p-link'>Visit Website <i className='fi-rr-angle-small-right'/></a>
                     </motion.span>
 
                     <button tabIndex="0" className='read-more-button' onClick={() => {setShowDescr(!showDescr)}}> {(showDescr === false)?<i className='fi-rr-angle-small-down visit-website-icon'/>:<i className='fi-rr-angle-small-up visit-website-icon'/>}</button>

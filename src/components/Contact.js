@@ -1,6 +1,7 @@
 
 import AnimOnView from "./anim/AnimOnView";
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import ToastContainer from "./Toast";
 
 require('dotenv').config();
 
@@ -9,12 +10,13 @@ const Contact = () => {
     const [ name, setName ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ message, setMessage ] = useState('');
-
+    const [ toast, setToast ] = useState('');
 
 
     const submitForm = async (e) => {
         
         e.preventDefault();
+        e.target.reset();
 
         const res = await fetch(`${process.env.REACT_APP_API_URL}/message`, {
             method: 'POST',
@@ -29,10 +31,21 @@ const Contact = () => {
             })
         });
 
+        setToast('Thank you!')
+
     }
+
+    useEffect(() => {
+        if(toast !== '') {
+            setTimeout(() => {
+                setToast('');
+            }, 5000)
+        } 
+    }, [toast])
 
     return(
         <div className='Contact full-screen align-center'>
+            {/* <ToastContainer string={toast} /> */}
             <AnimOnView>
                 <h2>Contact Me</h2>
                 <form className='contact-form' onSubmit={submitForm}>

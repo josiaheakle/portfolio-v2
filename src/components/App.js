@@ -26,6 +26,7 @@ const App = () => {
     setRenderHeader(bool);
   }
 
+
   return (
     <div className="App">
       {/* <CanvasBackground /> */}

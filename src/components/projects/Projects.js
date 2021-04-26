@@ -20,6 +20,13 @@ const Projects = (props) => {
         "Node-schedule was utilized to schedule the reminders."
     ]
 
+    const planVisionList = [
+        "WordPress application.",
+        "Embedded podcast player with RSS feed.",
+        "Custom styled components."
+    ]
+
+
     return (
         <div className='Projects full-screen align-center'>
             <AnimOnView>
@@ -37,6 +44,16 @@ const Projects = (props) => {
                             ghLink='https://github.com/josiaheakle/for-all-tn-api/' 
                             link='https://www.foralltn.org' 
                             list={forAllTnList} />
+                        <Project 
+                            iconName='fi-rr-headphones'
+                            // icon={RemiBackground}
+                            brightText={false}
+                            onlyImage={false}
+                            title='Plan Vision Podcast' 
+                            myWork='For this project, I was soley responsible for the development of this WordPress site.' 
+                            descr='Simple WordPress site designed for a podcast.'  
+                            link='https://planvisionpodcast.com/' 
+                            list={planVisionList} />
                         <Project 
                             iconName='fi-rr-alarm-clock'
                             icon={RemiBackground}
