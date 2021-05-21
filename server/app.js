@@ -10,15 +10,16 @@ let app = express();
 app.use(cors({
   origin: 'https://www.josiaheakle.com'
 }));
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 /*
   /message
 */
 
-app.use('/', messageRoute);
+app.use('/message', messageRoute);
 
 
 app.listen(process.env.PORT || 4000)

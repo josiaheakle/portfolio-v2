@@ -4,7 +4,7 @@ const DBHandler = require('../modules/DBHandler.js');
 const EmailHandler = require('../modules/EmailHandler.js');
 const router = express.Router();
 
-router.post('/message', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
 
     const name = req.body.name;
     const email = req.body.email;
