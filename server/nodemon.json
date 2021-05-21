@@ -1,0 +1,11 @@
+{
+    "watch":["./"],
+    "ext": "ts,js",
+    "ignore":[],
+    "exec": "npm run start ",
+    "events": {
+        "restart" : "echo restart",
+        "crash"   : "echo crash"
+    },
+    "delay": "3"
+}
