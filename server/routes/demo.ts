@@ -1,13 +1,39 @@
 import * as Express from "express";
 import * as Path from 'path';
 
-const route = Express.Router();
+const router = Express.Router();
 
-Path.dirname
+router.use("/directive", Express.static(Path.join(Path.dirname(__dirname), 'demos', 'directive')));
 
-route.get('/', (req : Express.Request, res : Express.Response, next : Function) => {
-    
-    res.status(200).sendFile('demos/test.html', {root:  Path.dirname(__dirname)})
+router.get('/directive', (req : Express.Request, res : Express.Response, next : Function) => {
+
+    res.status(200).sendFile('index.html', {root:  Path.join(Path.dirname(__dirname), 'demos', 'directive')});
+
 })
 
-export {route};
+router.use("/landed", Express.static(Path.join(Path.dirname(__dirname), 'demos', 'landed')));
+
+router.get('/landed', (req : Express.Request, res : Express.Response, next : Function) => {
+
+    res.status(200).sendFile('index.html', {root:  Path.join(Path.dirname(__dirname), 'demos', 'landed')});
+
+})
+
+router.use("/etherial", Express.static(Path.join(Path.dirname(__dirname), 'demos', 'etherial')));
+
+router.get('/etherial', (req : Express.Request, res : Express.Response, next : Function) => {
+
+    res.status(200).sendFile('index.html', {root:  Path.join(Path.dirname(__dirname), 'demos', 'etherial')});
+
+})
+
+router.use("/strata", Express.static(Path.join(Path.dirname(__dirname), 'demos', 'strata')));
+
+
+router.get('/strata', (req : Express.Request, res : Express.Response, next : Function) => {
+
+    res.status(200).sendFile('index.html', {root:  Path.join(Path.dirname(__dirname), 'demos', 'strata')});
+
+})
+
+export {router};
