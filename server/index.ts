@@ -1,5 +1,5 @@
 
-import {route as demoRoute} from "./routes/demo";
+import {router as demoRoute} from "./routes/demo";
 import * as Express from "express";
 
 let path = require('path');
