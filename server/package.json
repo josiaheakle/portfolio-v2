@@ -5,6 +5,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "ts-node --files ./",
+    "build-client": "cd ../josiah-eakle-development && npm run build",
+    "build": "npm run build-client && npm start",
     "dev": "nodemon"
   },
   "dependencies": {
