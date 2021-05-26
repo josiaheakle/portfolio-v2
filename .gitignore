@@ -3,6 +3,11 @@
 # dependencies
 portfolio/node_modules
 josiah-eakle-development/node_modules
+josiah-eakle-development/.cache/
+josiah-eakle-development/public
+josiah-eakle-development/.env.production
+josiah-eakle-development/.env.development
+
 server/node_modules
 
 /node_modules
