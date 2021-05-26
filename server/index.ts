@@ -17,7 +17,7 @@ app.use(cors(
 
 app.use(Express.json());
 
-app.use(Express.static(Path.join(Path.dirname(__dirname), 'josiah-eakle-development', 'public')));
+app.use(Express.static(Path.join(__dirname, 'public')));
 app.use((req : Express.Request, res : Express.Response, next : Function) => {
   console.log(`REQUEST AT ${req.path}`);
   next();
