@@ -12,7 +12,7 @@ let messageRoute = require('./routes/message.js');
 let app = Express();
 
 app.use(cors(
-  origin: ['https://www.josiaheakle.com'/*, 'https://localhost:8000'*/]
+  {origin: ['https://www.josiaheakle.com']}
 ));
 
 app.use(Express.json());
